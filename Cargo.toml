@@ -1,0 +1,8 @@
+[package]
+name = "grrs"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+indicatif = "=0.17.8"
+image = "0.25.2"
