@@ -8,9 +8,9 @@ pub type Color = Vec3;
 //Derive is basically making a copy of our "class" so you can reference to self and new as you construct objects
 #[derive(Clone, Copy)]
 pub struct Vec3{
-    x: f64,
+    pub x: f64,
    pub y: f64,
-    z: f64
+    pub z: f64
 }
 
 
@@ -74,8 +74,11 @@ impl Vec3 {
             }
         }
     }
-}
 
+    pub fn dot(self, other: Vec3) -> f64{
+        self.x * other.x + self.y * other.y + self.z * other.z
+    }
+}
 
 //A way of overloading to terminal
 impl fmt::Display for Vec3{

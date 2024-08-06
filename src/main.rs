@@ -5,12 +5,15 @@ mod dspace;
 use dspace::*;
 mod ray;
 use ray::Ray;
+mod sphere;
+mod hit;
+//use hit::Hittable;
 
 fn main() {
     
     //Our PNG dimensions
     const ASPECT_RATIO: f64 = 16.0 / 9.0;
-    const WIDTH: u32 = 256;
+    const WIDTH: u32 = 500;
     const HEIGHT: u32 = (WIDTH as f64 / ASPECT_RATIO) as u32;
     let camera_center = Point3d::new(0.0, 0.0, 0.0);
 
